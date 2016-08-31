@@ -1,4 +1,4 @@
- # Classifiedss - simple classified listing web application.
+#Classifiedss - simple classified listing web application.
 
  1. Developed a web application that allows the users to add new and view existing classified ads on the site.
  2. Provided admin the functionality to edit and delete the listed classifieds.
@@ -6,7 +6,7 @@
  4. Utilized Firebase to deliver backend for the web application.
  5. Implemented state based routing by using Angular UI-Router.
 
- #Pre-requisites
+#Pre-requisites
 
 1. Latest version of Node.js installed
 2. Account on Firebase.google.com
@@ -24,7 +24,5 @@ npm install
 npm install -g http-server
 http-server
 
-## License
 
-MIT
  
