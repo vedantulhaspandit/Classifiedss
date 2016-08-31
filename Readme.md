@@ -13,12 +13,12 @@
 
 #Installation
 
-1. To run the app, first install the dependencies (in package.json) with NPM.
+* To run the app, first install the dependencies (in package.json) with NPM.
 
 ```bash
 npm install
 ``` 
-2. Then serve the app with whichever web server you like. You can use **http-server** for a quick solution.
+* Then serve the app with whichever web server you like. You can use **http-server** for a quick solution.
 
 ```bash
 npm install -g http-server
