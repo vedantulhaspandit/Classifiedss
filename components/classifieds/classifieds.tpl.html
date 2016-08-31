@@ -1,0 +1,58 @@
+
+<!--  PUTTING vm on anything that is being called from controller -->
+    
+    <md-toolbar md-scroll-shrink>
+      <div class="md-toolbar-tools"> 
+    
+        <p><strong>CLASSIFIEDS</strong></p>
+        
+        <md-button ng-click="vm.openSidebar()">
+          <md-icon class="mdi mdi-plus-circle"></md-icon>
+            New Classified
+        </md-button>
+
+        <md-button ng-click="showFilters = true">
+          <md-icon class="mdi mdi-magnify"></md-icon>
+          Filters
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <div class="filters" layout="row" layout-align="center center" ng-show="showFilters">
+      <md-input-container>
+        <label>Enter a Search Term</label>
+        <input ng-model="classifiedsFilter" type="text">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Category</label>
+        <md-select ng-model="category">
+          <md-option ng-repeat="category in vm.categories" value="{{ category }}">  
+            {{ category }}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      
+      <div layout="row">
+        <md-button ng-click="classifiedsFilter = '';category='';" class="md-warn"> <!-- ng-click clears out the models -->
+          Clear
+        </md-button>
+      </div>
+
+    </div>
+
+    <ui-view></ui-view> <!-- view for substate -->
+
+
+
+    <md-content>
+    <classified-card 
+      classifieds = "vm.classifieds",
+      classifieds-filter="classifiedsFilter",
+      category="category"
+      class="md-padding" 
+      layout="row" 
+      layout-wrap>
+    </classified-card>
+
+    </md-content>
