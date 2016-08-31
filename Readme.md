@@ -23,6 +23,7 @@ npm install
 ```bash
 npm install -g http-server
 http-server
+```
 
 
  
